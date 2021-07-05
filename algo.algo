@@ -1,0 +1,30 @@
+PROCEDURE swap (i:integer , var arr:array-of integer [100])
+VAR
+  stc:integer
+BEGIN
+  stc=arra[i-1];
+  arr[i-1]=arr [i];
+  arr[i]=stc
+END
+ ALGORITHM insertion
+
+ VAR
+ k;i:integer;
+ BEGIN
+   FOR i FROM 1 TO arr.length-1 STEP 1  DO
+     k:=i;
+     WHILE (k>0) DO
+      if ( arr [k-1] > arr [k]){
+        SWITCH (k,arr); 
+         k:=k-1;
+      }
+        
+         else{
+           break;
+         }
+        END_if
+      
+     END_WHILE
+   END_FOR
+   write(arr)
+ END
